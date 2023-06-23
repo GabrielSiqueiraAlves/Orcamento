@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Horários das Mãetoristas</title>
+</head>
+
+
+    <body>
+        <h1>Consulte a disponibilidade de horários de nossas motoristas e faça seu orçamento.</h1>
+        <div class="driver-container">
+            <section class="driver-section">
+                <div class="driver-info">
+                    <h2>Segunda-Feira</h2>
+                    <p> 07:00 - 12:30</p>
+                    <p>13:30 - 17:30</p>
+                </div>
+            </section>
+
+            <section class="driver-section">
+                <div class="driver-info">
+                    <h2>Terça - Feira</h2>
+                    <p> 07:00 - 11:30</p>
+                    <p>12:30 - 18:00</p>
+                </div>
+            </section>
+
+            <section class="driver-section">
+                <div class="driver-info">
+                    <h2>Quarta-Feira</h2>
+                    <p>07:00 - 12:00</p>
+                    <p>13:00 - 17:30</p>
+                </div>
+            </section>
+        </div>    
+        <div class="driver-container2">
+            <section class="driver-section">
+                <div class="driver-info">
+                    <h2>Quinta-Feira</h2>
+                    <p>07:00 - 12:00</p>
+                    <p>13:00 - 18:00</p>
+                </div>
+            </section>
+            <img src="pliix.png" alt="">
+            <section class="driver-section">
+                <div class="driver-info">
+                    <h2>Sexta-Feira</h2>
+                    <p>07:30 - 11:30</p>
+                    <p>13:30 - 17:30</p>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="content">
+            <h3>Faça seu Orçamento Mensal!</h3>
+            <form>
+                <label for="endereco-destino">Quantos dias por mês?</label>
+                <input type="number" class="diasPorMes" placeholder="Dias por mês">
+
+                <label for="endereco-inicio">Endereço de Início:</label>
+                <input type="text" placeholder="digite a origem.." class="origem" />
+
+                <label for="endereco-destino">Endereço Final:</label>
+                <input type="text" placeholder="digite o destino.." class="destino" />
+
+                <div>
+                    <label for="idaVoltaCheckbox">Viagem de ida e volta?</label>
+                    <input type="checkbox" id="idaVoltaCheckbox">
+                </div>
+                  
+                <button id="consultar" class="btn-send" type="button" onclick="calculaValor()">
+                    Consultar
+                </button>
+            </form>
+
+            <div class="resultado-ok">
+                Valor do orçamento Mensal: <br>
+                <span class="valor"></span>
+            </div>
+
+            <div class="mapa-container"></div>
+
+            <div class="resultado-erro">
+                Tivemos um erro ao solicitar o orçamento, favor entre em contato com nosso whats...
+            </div>
+
+            <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl_7VTBkVGHpPU07w4k8LvXXFdEe3Qbnk&libraries=places"></script>
+            <script src="./index.js"></script>
+        </div>
+
+    </body>
+
+</html>
